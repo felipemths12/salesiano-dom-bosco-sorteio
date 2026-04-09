@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;400;700;900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <title>Sorteio da Copa</title>
+</head>
+
+<body>
+    <main class="main-content">
+        <header class="header-banner">
+            <h1 class="main-title">Salesiano Dom Bosco</h1>
+            <!-- <img src="assets/amigo-secreto.png" alt="Imagem representativa do sorteio"> -->
+        </header>
+        
+        <section class="input-section" id="area-pdf">
+            <h2 class="section-title">Resultados do Sorteio</h2>
+            
+            <h3 id="resultado-destaque" class="result-list" aria-live="polite">Pressione "Sortear" para iniciar</h3>
+
+            <div class="lista-container">
+                <ul id="lista-historico" class="name-list" style="text-align: center;"></ul>
+            </div>
+
+            <div class="button-container" style="display: flex; flex-direction: column; gap: 15px; margin-top: 30px;" data-html2canvas-ignore>
+                <button id="btn-sortear" class="button-draw" onclick="sortear()" aria-label="Sortear Turma e Seleção">
+                    <img src="assets/play_circle_outline.png" alt="Ícone para sortear">
+                    Realizar Sorteio
+                </button>
+                
+                <button id="btn-desfazer" class="button-add" style="border-radius: 25px; padding: 10px;" onclick="desfazerUltimo()">
+                    Desfazer Último Sorteio
+                </button>
+
+                <button id="btn-pdf" class="button-draw" style="display: none; background-color: #05DF05; justify-content: center;" onclick="gerarPDF()">
+                    📄 Baixar Resultado em PDF
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <script src="app.js" defer></script>
+</body>
+</html>
