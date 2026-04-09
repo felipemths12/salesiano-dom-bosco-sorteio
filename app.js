@@ -136,6 +136,8 @@ function atualizarTela() {
         const li = document.createElement("li");
         li.textContent = `✅ ${historicoSorteios[i].turma} vai representar a seleção de: ${historicoSorteios[i].selecao}`;
         lista.appendChild(li);
+
+        twemoji.parse(document.body);
     }
 }
 

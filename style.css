@@ -199,3 +199,11 @@ ul {
 .lista-container::-webkit-scrollbar-thumb:hover {
     background: #334bc4; /* Cor ao passar o mouse */
 }
+
+/* Deixa os emojis do Twemoji do tamanho exato da fonte do texto */
+img.emoji {
+    height: 1em;
+    width: 1em;
+    margin: 0 .05em 0 .1em;
+    vertical-align: -0.1em;
+}
